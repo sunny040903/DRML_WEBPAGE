@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="image/favicon.png" type="image/png">
+    <title>Detection Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0fff0;
+            /* Light green background */
+            color: #006400;
+            /* Dark green text */
+            text-align: center;
+            padding: 20px;
+        }
+        
+        h2 {
+            color: #008000;
+            /* Green heading */
+        }
+        
+        p {
+            font-size: 18px;
+        }
+        
+        strong {
+            color: #006400;
+            /* Dark green for strong text */
+        }
+        
+        img {
+            border: 2px solid #008000;
+            /* Green border around image */
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #008000;
+            /* Green button */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        a:hover {
+            background-color: #006400;
+            /* Darker green on hover */
+        }
+        
+        #processing {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ff8c00;
+            /* Orange color for processing text */
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Detection Result</h2>
+
+    <p id="processing">Processing... Please wait.</p>
+
+    <p><strong>Result: <span id="resultText"></span></strong></p>
+
+    <h3>Uploaded Image</h3>
+    <img id="uploadedImage" alt="Uploaded Image" width="300">
+
+    <br><br>
+    <a href="detect.html">Upload Another Image</a>
+
+    <script>
+        document.getElementById("processing").style.display = "block";
+        document.getElementById("resultText").style.display = "none";
+        document.getElementById("uploadedImage").style.display = "none";
+
+        setTimeout(() => {
+            document.getElementById("processing").style.display = "none";
+            document.getElementById("resultText").style.display = "inline";
+            document.getElementById("uploadedImage").style.display = "inline";
+
+            // Retrieve classification result and image from localStorage
+            document.getElementById("resultText").innerText = localStorage.getItem("classificationResult");
+
+            let imageData = localStorage.getItem("uploadedImage");
+            if (imageData) {
+                document.getElementById("uploadedImage").src = imageData;
+            } else {
+                document.getElementById("uploadedImage").alt = "No Image Available";
+            }
+        }, 3000); // 3 seconds delay
+    </script>
+</body>
+
+</html>

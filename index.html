@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetic Retinopathy Detection</title>
+    <link rel="icon" href="image/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+
+    <header>
+        <!-- Logo and Website Name -->
+        <div class="logo-container">
+            <img src="image/favicon.png" alt="Logo" class="logo">
+            <!-- Add logo image here -->
+            <h1>Diabetic Retinopathy Predictions</h1>
+
+        </div>
+
+        <!-- Navigation -->
+        <nav>
+
+            <a href="home.html" class="home-button">INFO</a>
+            <a href="signup.html" class="nav-button">
+                <i class="fa-solid fa-user-plus"></i> Signup
+            </a>
+        </nav>
+    </header>
+
+    <div class="hero-section">
+        <h1>Welcome to Diabetic Retinopathy Detection System</h1>
+        <h1>Diabetic Retinopathy Detection by means of Machine Learning</h1>
+        <p>Accurate predictions with cutting-edge technology.</p>
+        <!-- Main Content -->
+        <main>
+            <div class="container">
+
+                <p>This system offers an automated solution to enhance detection accuracy of diabetic retinopathy through Machine learning.</p>
+                <!-- Update this to make the Get Started button link to work.html -->
+                <a href="work.html" class="cta-button">Get Started</a>
+                <!-- Make the button link to work.html -->
+            </div>
+        </main>
+
+        <!-- Main Content -->
+        <div class="main-container">
+            <h2>Welcome to Diabetic Retinopathy Prediction</h2>
+            <p>Click on login and start using the prediction system!</p>
+
+            <a href="login.html" class="cta-button">Login</a>
+        </div>
+    </div>
+
+
+
+    <div class="description-section">
+        <h2>Diabetic Retinopathy Prediction</h2>
+        <p>Diabetic Retinopathy is a human eye disease that causes damage to the retina and may eventually lead to blindness. Early detection through modern technology is crucial to prevent complete blindness. Many physical tests, such as visual acuity tests
+            and pupil dilation, are conducted for diagnosis. This system offers an automated, deep-learning-powered solution to enhance detection accuracy.</p>
+    </div>
+
+    <footer>
+        © 2025 Diabetic Retinopathy Detection
+    </footer>
+
+    <!-- Login Page on the Right -->
+    <div id="loginOverlay" class="login-overlay hidden">
+        <div class="login-container">
+            <h1>Login</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                </div>
+                <button type="submit">Login</button>
+                <button type="button" id="closeButton" class="close-button">Close</button>
+                <p id="error" class="error-message"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
